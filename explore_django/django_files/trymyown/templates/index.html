@@ -1,0 +1,67 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page</title>
+    <link rel="stylesheet" href="static/css/main.css">
+    <style>
+        .main{
+            background-color: red;
+            width: 500px;
+            color: white;
+            padding: 20px;
+            font-size: 30px;
+        }
+        *{
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h2>Welcome to WS Cube</h2>
+        <a href="tryindex.html">Let's go for the try practice page</a>
+        <a href="about-us.html">ABOUT US</a>
+        <h2>Welcome to WS Cube</h2>
+        <h3>{{title}}</h3>
+        <h3>{{bdata}}</h3>
+        <h3>{{courseList}}</h3>
+        <h3>{{studentDetails}}</h3>
+
+        {% for course in courseList %}
+            <p>{{course}}</p>
+            <!-- <p>{{forloop.revcounter0}}</p> -->
+            <p>{{forloop.first}}</p>
+            <p>{{course}} {{forloop.first}}</p>
+
+        {% endfor %}
+
+        <br>
+        <table border="1" cellpadding="10"> 
+            <tr>
+                <th>Name</th>
+                <th>Phone number</th>
+            </tr>
+
+            {% for student in studentDetails %}
+            <tr>
+                <td>{{student.Name}}</td>
+                <td>{{student.Phone}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+
+    {% if numbers|length > 0 %}    
+        {% for num in numbers %}
+            {% if num > 20 %}
+                <p>Numbers that are greater than 20 is: {{num}}</p>
+            {% endif %}
+        {% endfor %}
+    {% else %}
+        <p>No data found</p>
+    {% endif %}
+    </div>
+</body>
+</html>

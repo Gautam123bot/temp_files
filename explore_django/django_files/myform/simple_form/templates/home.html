@@ -1,0 +1,27 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<div class="container">
+    <form class="emp_form" action="post_form" method="post">
+        <label for="">Name :</label>
+        <input type="text" name="" id=""><br><br>
+        <label for="">Employee Number :</label>
+        <input type="text" name="" id=""><br><br>
+        <label for="">Salary :</label>
+        <input type="text" name="" id=""><br><br>
+        <button type="submit">Submit</button>
+    </form>
+    
+    {% for i in home %}
+    
+        <h3>{{i.name}}</h3>
+        <h3>{{i.emp_no}}</h3>
+        <h3>{{i.salary}}</h3>
+    
+    {% endfor %}
+</div>
+
+
+{% endblock %}
+

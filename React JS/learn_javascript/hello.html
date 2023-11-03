@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn_javaScript</title>
+</head>
+<body>
+    <div class="show">
+        <p>Hello HTML</p>
+        <p id="take_inner_html" onclick="myFunction()">Check for the change here</p>
+        
+    </div>
+    <script>
+        var n=prompt("Enter a number: ");
+        function even() {
+            if(n%2==0){
+                console.log("even");
+            }
+            else{
+                console.log("odd");
+            }
+        }
+        even();
+        function myFunction() {
+            document.getElementById("take_inner_html").innerHTML="Changed the value";
+        }
+        document.write("Written using document.write()");
+        console.log("Hello html and javascript");
+        console.log("You are working");
+    </script>
+</body>
+</html>

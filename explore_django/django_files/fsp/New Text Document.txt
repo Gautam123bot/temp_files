@@ -1,0 +1,13 @@
+npm create vite@latest .
+npm i
+npm run dev
+
+python -m venv venv
+venv/Scripts/activate
+cd venv
+pip install django django_restframework django-cors-headers
+
+django-admin startproject backend
+cd backend
+python manage.py migrate
+python manage.py createsuperuser

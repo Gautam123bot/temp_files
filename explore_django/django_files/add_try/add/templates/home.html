@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+    <script>
+        function addtwo(){
+            var a=parseInt(document.getElementById("first_input").value);
+            var b=parseInt(document.getElementById("second_input").value);
+            var ans=a+b;
+            document.getElementById("ans_input").value=ans;
+        }
+                
+    </script>
+</head>
+<body>
+    <h1>This is add page</h1>
+    <p>simple text</p>
+    <p>{{another_text}}</p>
+    <label for="">Enter first number: </label><input type="text" name="" id="first_input">
+    <br><br>
+    <label for="">Enter second number: </label><input type="text" name="" id="second_input">
+    <br><br>
+    <button type="submit" onclick="addtwo()">ADD</button><br><br>
+    <label for="">Your Answer: </label><input type="text" name="" id="ans_input"><br>
+
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+{% extends 'link.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="full">
+
+    <div class="tagline">
+        <h4>THIS IS A PDF FILE MANAGER APPLICATION</h4>
+    </div>
+
+    <div class="image">
+        <img src="{% static '/img/pdf_img.png' %}" alt="" width="100px">
+    </div>
+
+    <form action="/merge" method="post" class="pdf_form" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="exampleFormControlFile1">Select the pdf files you want to merge</label><br><br>
+            <input type="file" name="file" id="exampleFormControlFile1" multiple accept=".pdf" class="form-control-file"
+                placeholder="Select your file"><br><br>
+            <!-- <a href="/home/downloadfile"><button>Download file</button></a> -->
+            <!-- <input type="button" type="submit" value="Download" onclick="window.open('{{file}}')"> -->
+            <input class="btn btn-primary" type="submit" value="Submit">
+
+        </div>
+    </form>
+
+
+</div>
+
+{% endblock %}

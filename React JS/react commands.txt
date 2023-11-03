@@ -1,0 +1,6 @@
+npx create-react-app <file_name>
+cd <file_name>
+npm start
+
+cc - command for class based
+imr - for functional component

@@ -1,0 +1,22 @@
+mkdir <filename>
+cd <filename>
+pipenv install django
+
+django <filename> <filename> .
+
+
+
+test environment is kept here -     C:\Users\GAUTAM\Envs
+
+steps:-
+django-admin startproject telusko
+python manage.py runserver
+
+python manage.py startapp playgruond
+workon test in cmd
+test is the name of the virtual environment created
+
+
+do in settings when new folder created
+import os
+'DIRS': [os.path.join(BASE_DIR,'my_templates')],
